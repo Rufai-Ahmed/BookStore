@@ -17,8 +17,11 @@ const Header = () => {
           <Search>
             <BsSearch />
           </Search>
-          <NavLink to="/uploads" style={{ textDecoration: "none" }}>
-            <Button>Upload</Button>
+          <NavLink
+            to="/uploads"
+            style={{ textDecoration: "none", cursor: "pointer" }}
+          >
+            <Button>Upload Books</Button>
           </NavLink>
         </End>
       </Container>
@@ -28,11 +31,22 @@ const Header = () => {
 
 export default Header;
 
-const Button = styled.div``;
+const Button = styled.button`
+  padding: 9px 14px;
+  font-size: 22px;
+  color: white;
+  margin-left: 7px;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  background-color: #ea4c89ff;
+  cursor: pointer;
+`;
 
 const Search = styled.div`
-  font-size: 20px;
+  font-size: 25px;
   margin-top: 10px;
+  color: grey;
 `;
 
 const End = styled.div`
@@ -43,10 +57,14 @@ const End = styled.div`
   margin-right: 50px;
 `;
 
-const Text = styled.div``;
+const Text = styled.div`
+  font-size: 30px;
+  margin-left: 10px;
+  font-weight: 600;
+`;
 
 const Logo = styled.img`
-  width: 100%;
+  width: 50%;
   height: 100%;
   object-fit: contain;
   cursor: pointer;
@@ -62,8 +80,8 @@ const Image = styled.div`
 
 const Container = styled.div`
   width: 100%;
-  height: 10vh;
-  background-color: plum;
+  height: 8vh;
+  background-color: white;
   justify-content: space-between;
   display: flex;
   align-items: center;
